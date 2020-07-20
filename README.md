@@ -51,3 +51,9 @@ git push
 ssh blog@dev1 'bash -s' < bin/deploy.sh
 ```
 
+##　备忘
+
+```bash 
+docker run --name nginx1 --network=host -v /home/blog/nginx.conf:/etc/nginx/conf.d/default.conf -v /home/
+blog/app/.next/static/:/usr/share/nginx/html/_next/static/ -d nginx:1.19.1
+```
